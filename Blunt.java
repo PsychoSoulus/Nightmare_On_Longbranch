@@ -8,6 +8,14 @@ public class Blunt extends Weapon
 		equiped = true;
 		small = true;
 	}
+	
+	public Blunt(String x, int y, int z, boolean a){
+		name =x;
+		maxDam=y,
+		minDam=z;
+		equiped=false;
+		small = a;
+	}
 
 
 }
