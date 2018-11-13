@@ -17,5 +17,7 @@ public class Blunt extends Weapon
 		small = a;
 	}
 
-
+	public void Attack(Character en, Character Use){
+		
+	}
 }
