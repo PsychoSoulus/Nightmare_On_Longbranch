@@ -3,16 +3,25 @@ public abstract class Character
 {
 	private String n;
 	private int h;
+	private int mh;
 	private boolean stun =false;
 	private boolean block=false;
 	public Character()
 	{
 		n="Null";
-		h=100;
+		mh=100;
+		h=mh;
 	}
 	public Character(String Name, int Health)
 	{
 		n=Name;
+		mh=Health;
+		h=mh;
+	}
+	
+	public Character(String Name, int MHealth, int Health){
+		n=name;
+		mh=MHealth;
 		h=Health;
 	}
 	
@@ -75,6 +84,13 @@ public abstract class Character
 	}
 	public void UnBlock(){
 		block=false;
+	}
+	
+	public boolean Critical(){
+	if (h<=mh/10)
+		return true;
+	else
+		return false;
 	}
 	
 	public abstract void Fight(Player x);
