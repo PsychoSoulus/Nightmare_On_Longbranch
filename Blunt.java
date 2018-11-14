@@ -18,6 +18,13 @@ public class Blunt extends Weapon
 	}
 
 	public void Attack(Character en, Character Use){
-		
+		switch (en.isBlock()){
+			case true:
+				break;
+			case false:
+				if(en.Critical()||(Use instanceof Player && Use.getInt>11()){
+					
+				}
+		}
 	}
 }
