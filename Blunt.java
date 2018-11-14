@@ -22,9 +22,13 @@ public class Blunt extends Weapon
 			case true:
 				break;
 			case false:
-				if(en.Critical()||(Use instanceof Player && Use.getInt>11()){
-					
+				if(en.Critical()||(Use instanceof Player && Use.getInt()>11)){
+					if(Math.random()<0.15){
+						en.Sleep();
+						break;
+					}
 				}
+				
 		}
 	}
 }
