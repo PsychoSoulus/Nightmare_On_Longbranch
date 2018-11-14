@@ -2,8 +2,8 @@
 public class Player extends Character
 {
 	private int Med =0;//MEDICAL
-	private int Sur =0;//SURVIAL ABITIES
-	private int Self =0;//SELF AWARENESS
+	private int Str =0;//STRENGTH ABITIES
+	private int Int =0;//INTELLIGENCE AWARENESS
 	private boolean gen = false;
 	private boolean FFight = true;
 	
@@ -17,26 +17,26 @@ public class Player extends Character
 		Med++;
 	}
 	
-	public void surUp()
+	public void strUp()
 	{
-		Sur++;
+		Str++;
 	}
 	
-	public void selfUp()
+	public void intUp()
 	{
-		Self++;
+		Int++;
 	}
 
 	public int getMed() {
 		return Med;
 	}
 
-	public int getSur() {
+	public int getStr() {
 		return Sur;
 	}
 
-	public int getSelf() {
-		return Self;
+	public int getInt() {
+		return Int;
 	}
 	
 	public boolean FullHealth()
