@@ -6,6 +6,7 @@ public abstract class Character
 	private int mh;
 	private boolean stun =false;
 	private boolean block=false;
+	private boolean Uncon=false;
 	public Character()
 	{
 		n="Null";
@@ -23,6 +24,13 @@ public abstract class Character
 		n=name;
 		mh=MHealth;
 		h=Health;
+	}
+	
+	public Character(String Name, int MHealth, int Health, boolean x){
+		n=name;
+		mh=MHealth;
+		h=Health;
+		Uncon=x;
 	}
 	
 	public String getName()
@@ -85,7 +93,15 @@ public abstract class Character
 	public void UnBlock(){
 		block=false;
 	}
-	
+	public void Sleep(){
+		Uncon=true;
+	}
+	public void Wake(){
+		Uncon=false;
+	}
+	public boolean Uncon(){
+		return Uncon;
+	}
 	public boolean Critical(){
 	if (h<=mh/10)
 		return true;
