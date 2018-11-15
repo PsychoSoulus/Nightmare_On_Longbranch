@@ -18,17 +18,30 @@ public class Blunt extends Weapon
 	}
 
 	public void Attack(Character en, Character Use){
-		switch (en.isBlock()){
+		switch (Use.isStun()){
 			case true:
 				break;
 			case false:
-				if(en.Critical()||(Use instanceof Player && Use.getInt()>11)){
-					if(Math.random()<0.15){
-						en.Sleep();
+				switch (en.isBlock()){
+					case true:
 						break;
-					}
-				}
-				
+					case false:
+						if(en.Critical()||(Use instanceof Player && Use.getStr()>11)){
+							if(Math.random()<0.15){
+								en.Sleep();
+							else
+								en.lessHealth(Math.RandomInt(maxDam)+1);	
+							break;
+							}
+						}
+						else 
+							en.lessHealth(Math.RandomInt(maxDam)+1);
+						break;
+					case default:
+						en.lessHealth(Math.RandomInt(maxDam)+1);
+						break;
+				}//block switch end
+				break;
 		}
 	}
 }
