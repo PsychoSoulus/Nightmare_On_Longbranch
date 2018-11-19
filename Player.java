@@ -5,7 +5,8 @@ public class Player extends Character
 	private int Str =0;//STRENGTH ABITIES
 	private int Int =0;//INTELLIGENCE AWARENESS
 	private boolean gen = false;
-	private boolean FFight = true;
+	private boolean FFight = true;//First Fight For tutorial
+	private Character BFriend;//BEST FRIEND
 	
 	public Player(String name)
 	{
@@ -106,8 +107,6 @@ public class Player extends Character
 	public void setFFight() {
 		FFight = false;
 	}
-	public void Fight(Player x)
-	{}
 
 	public boolean isGen() {
 		return gen;
@@ -117,7 +116,13 @@ public class Player extends Character
 		gen = c;
 	}
 	
+	public void setBF(Character x){
+		BFriend=x;
+	}
 
+	public Character getBF(){
+		return BFriend;
+	}
 
 	
 }
